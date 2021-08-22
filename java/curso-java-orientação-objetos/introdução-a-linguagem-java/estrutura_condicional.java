@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class estrutura_condicional {
+	public static void main(String [] arg) {
+		Scanner sc = new Scanner(System.in);
+		int hora;
+		
+		System.out.println("quantas horas? ");
+		hora = sc.nextInt();
+		
+		if(hora < 12) {
+			System.out.println("Bom dia!!");
+		}
+		else if(hora > 12 && hora < 18) {
+			System.out.println("Boa tarde");
+		}
+		else {
+			System.out.println("Boa noite");
+		}
+		
+		
+	}
+}
