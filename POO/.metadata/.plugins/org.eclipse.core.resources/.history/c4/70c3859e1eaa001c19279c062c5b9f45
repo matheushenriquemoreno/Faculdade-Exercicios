@@ -1,0 +1,21 @@
+package Exercicios;
+
+public class Exercicio9 {
+
+	public static void main(String[] args) {
+		System.out.println(calculaPotenciacao(2,3));
+
+	}
+	
+	public static int calculaPotenciacao(int base, int expoente) {
+		
+		int resultado = 0;
+		
+		for (int i = 0; i < expoente; i++) {
+			resultado += base * base;
+		}
+		
+		return resultado;
+	}
+
+}

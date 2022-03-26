@@ -1,0 +1,44 @@
+package Exercicios;
+
+import java.util.Scanner;
+
+public class Exercicio5 {
+
+	public static void main(String[] args) {
+
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.println("Digite seu numero de identificação: ");
+		int codigo = entrada.nextInt();
+		
+		System.out.println("Digite sua nota: ");
+		double nota1 = vefificaNotaValida(entrada.nextDouble());
+		
+		System.out.println("Digite sua nota: ");
+		double nota2 = vefificaNotaValida(entrada.nextDouble());
+		
+		System.out.println("Digite sua nota: ");
+		double nota3 = vefificaNotaValida(entrada.nextDouble());
+		
+		System.out.println("Digite a media dos exercicios ");
+		double mediaExercicio = vefificaNotaValida(entrada.nextDouble());
+		
+		double media = (nota1 + nota2 + nota2 + mediaExercicio) / 7.0;
+		
+		
+	}
+	
+	
+	public static double vefificaNotaValida(double nota) {
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		while(nota < 0 || nota > 10) {
+			System.out.print("nota invalida Digite novamente: ");
+			nota =  entrada.nextDouble();
+		}
+		
+		return nota;
+	}
+
+}

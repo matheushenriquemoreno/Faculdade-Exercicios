@@ -1,0 +1,22 @@
+package Exercicios;
+
+public class Exercicio9 {
+
+	public static void main(String[] args) {
+		
+
+	}
+	
+	public static int calculaPotenciacao(int base, int expoente) {
+		
+		int resultado = 0;
+		
+		for (int i = 0; i < expoente; i++) {
+			resultado += base * base;
+		}
+		
+		
+		return 0;
+	}
+
+}
