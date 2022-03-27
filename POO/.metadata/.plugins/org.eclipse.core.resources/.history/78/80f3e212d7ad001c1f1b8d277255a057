@@ -1,0 +1,35 @@
+package Exercicios;
+
+import java.util.Scanner;
+
+public class Exercicio12 {
+
+	public static void main(String[] args) {
+
+		Scanner entrada = new Scanner(System.in);
+		
+		
+		System.out.println("Digite seu Nome: ");
+		String nome = entrada.nextLine();
+		
+		System.out.println("Digite sua nota: ");
+		double nota1 = vefificaNotaValida(entrada.nextDouble());
+		
+		System.out.println("Digite sua nota: ");
+		double nota2 = vefificaNotaValida(entrada.nextDouble());
+
+	}
+	
+	public static double vefificaNotaValida(double nota) {
+		Scanner entrada = new Scanner(System.in);
+		
+		while(nota < 0 || nota > 10.00) {
+			System.out.println("Erro nota Invalida! Digite novamente.");
+			nota = entrada.nextDouble();
+		}
+		
+		return nota;
+	}
+
+	
+}

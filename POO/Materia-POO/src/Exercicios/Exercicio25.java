@@ -15,9 +15,9 @@ public class Exercicio25 {
 	
 		char[] vetorCaracter = retornaVetorPopuladoChar(10);
 
-		System.out.println("vetor 1 digitado");
+		System.out.println("Popule o primeiro vetor: ");
 		printaVetor(vetor1);
-		System.out.println("vetor 2 digitado");
+		System.out.println("Popule o segundo vetor");
 		printaVetor(vetor2);
 		System.out.println("vetor de Caracter digitado");
 		printaVetor(vetorCaracter);
@@ -56,7 +56,7 @@ public class Exercicio25 {
 		double [] vetor = new double [tamanho];
 		
 		for(int i = 0; i < vetor.length; i ++) {
-			System.out.println("Popule o vetor [" + (i + 1) + "]:");
+			System.out.println("vetor posicao [" + (i + 1) + "]:");
 			vetor[i]= entrada.nextDouble();
 		}
 		return vetor;

@@ -1,0 +1,30 @@
+package Exercicios;
+
+import java.util.Scanner;
+
+public class Exercicio9 {
+
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+
+		System.out.println("digite um numero para a potenciacao: ");
+		int x = entrada.nextInt();
+
+		System.out.println("Digite a base: ");
+		int y = entrada.nextInt();
+		
+		System.out.println(x+"Elevado a "+ y + " = "+calculaPotenciacao(x,y));
+	}
+	
+	public static int calculaPotenciacao(int base, int expoente) {
+		
+		int resultado = base;
+		
+		for (int i = 1; i < expoente; i++) {
+			resultado = base * resultado ;
+		}
+		
+		return resultado;
+	}
+
+}

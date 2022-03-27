@@ -6,8 +6,10 @@ public class Exercicio18 {
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
 		
-		int linha = 1, quantidadeLinha = 13, linhaQuebra = 1, contador = 1; 
+		int linha = 1, linhaQuebra = 1, contador = 1; 
 		
+		System.out.print("digite a quantidade de linha para a piramide de asteriscos: ");
+		int quantidadeLinha = entrada.nextInt();
 		
 		while(linha <= quantidadeLinha) { // comparo a a quantidade de linha executadas com a quantidade maxima.
 			System.out.print("*");
@@ -19,7 +21,5 @@ public class Exercicio18 {
 			
 			contador++;
 		}
-
-
 	}
 }

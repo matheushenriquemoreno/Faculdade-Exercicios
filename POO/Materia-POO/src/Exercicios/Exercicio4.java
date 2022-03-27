@@ -19,7 +19,7 @@ class Exercicio4 {
 		double salarioLiquido = calculaSalario(horasExtras);
 
 		System.out.println("Funcionario com a mátricula " + matricula + " teve " + horasExtras
-				+ "horas-extras, seu salario = " + salarioLiquido);
+				+ " horas-extras, seu salario = " + salarioLiquido);
 
 		entrada.close();
 
@@ -31,23 +31,23 @@ class Exercicio4 {
 
 		double salarioHoraExtra = ValorHoraExtra * horaExtra;
 
-		double salarioBruto = 3 * salarioMinimo + salarioHoraExtra;
+		double salarioBruto = (3 * salarioMinimo) + salarioHoraExtra;
 
 		if (salarioBruto > 1500.00)
 			deducoes = descontoInss(salarioBruto);
 
 		if (salarioBruto > 2000.00)
-			deducoes = salarioBruto = DescontoImpostoDeRenda(salarioBruto);
+			deducoes = DescontoImpostoDeRenda(salarioBruto);
 
 		return salarioBruto - deducoes;
 	}
 
 	public static double DescontoImpostoDeRenda(double salarioBruto) {
-		return salarioBruto * 0.12;
+		return salarioBruto * 0.2;
 	}
 
 	public static double descontoInss(double salarioBruto) {
-		return salarioBruto * 0.2;
+		return salarioBruto * 0.12;
 	}
 
 }
