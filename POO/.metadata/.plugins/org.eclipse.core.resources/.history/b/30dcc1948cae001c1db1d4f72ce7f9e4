@@ -1,0 +1,59 @@
+package Exercicios;
+
+import java.util.Scanner;
+
+public class Exercicio14 {
+
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		 
+		String desejaSair;
+		
+		int contadorAlunos = 0, contadorAprovados = 0, cotadorReprovados = 0, contadorExame = 0;
+		
+		
+		do {
+			
+			System.out.println("Digite sua nota: ");
+			double nota1 = verificaNota(entrada.nextDouble());
+					
+			System.out.println("Digite sua nota: ");
+			double nota2 = verificaNota(entrada.nextDouble());
+			
+			double mediaAritimedica = (nota1 + nota2) / 2;
+			
+			double mediaClasse += mediaAritimedica;
+			
+			if(mediaAritimedica >= 7) {
+				System.out.println("Aprovado");
+				contadorAprovados ++;
+			}
+			else if(mediaAritimedica > 3 && mediaAritimedica < 7) {
+				System.out.println("Exame");
+				contadorExame++;
+			}
+			else {
+				System.out.println("Reprovado");
+				cotadorReprovados++;
+			}
+			
+			
+			
+
+			contadorAlunos++;
+			
+		} while(desejaSair != "sim");
+	}
+
+	public static double verificaNota(double nota) {
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		while (nota > 10.00 || nota < 0 ) {
+			System.out.println("nota Invalida digite novamente: ");
+			nota = entrada.nextDouble();
+			}
+		return nota;
+	}
+	
+}

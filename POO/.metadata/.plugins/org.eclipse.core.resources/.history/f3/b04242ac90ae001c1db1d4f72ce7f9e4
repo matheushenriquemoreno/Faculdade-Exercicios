@@ -8,6 +8,7 @@ public class Exercicio14 {
 		Scanner entrada = new Scanner(System.in);
 		 
 		String desejaSair,nomeMaiorMedia ="", nomeMenorMedia ="";
+		
 		int contadorAlunos = 0, contadorAprovados = 0, cotadorReprovados = 0, contadorExame = 0;
 		double mediaClasse = 0, maiorMedia = 0, menorMedia = 0;
 
@@ -74,6 +75,7 @@ public class Exercicio14 {
 
 	}
 
+	
 	public static double verificaNota(double nota) {
 		
 		Scanner entrada = new Scanner(System.in);

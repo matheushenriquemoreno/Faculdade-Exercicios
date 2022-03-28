@@ -8,6 +8,7 @@ public class Exercicio14 {
 		Scanner entrada = new Scanner(System.in);
 		 
 		String desejaSair,nomeMaiorMedia ="", nomeMenorMedia ="";
+		
 		int contadorAlunos = 0, contadorAprovados = 0, cotadorReprovados = 0, contadorExame = 0;
 		double mediaClasse = 0, maiorMedia = 0, menorMedia = 0;
 
@@ -26,12 +27,9 @@ public class Exercicio14 {
 			
 			mediaClasse += mediaAritimedica;
 			
-			// inicializo as variaveis.
 			if(maiorMedia == 0 && menorMedia == 0) {
 				maiorMedia = mediaAritimedica;
 				menorMedia = mediaAritimedica;
-				nomeMaiorMedia = nome;
-				nomeMenorMedia = nome;
 			}
 			if(mediaAritimedica > maiorMedia) {
 				maiorMedia = mediaAritimedica;
@@ -60,20 +58,21 @@ public class Exercicio14 {
 			System.out.println("Deseja Sai?(sim, não)");
 			desejaSair = entrada.next();
 			
-		} while(!desejaSair.equals("sim"));
+		} while(desejaSair != "sim");
 		
 		
-		System.out.println("Relatorio das inserções de nota: ");
-		System.out.println("Quantidade de alunos Digitados: " + contadorAlunos);
-		System.out.println("Quantidade de alunos Aprovados: " + contadorAprovados);
-		System.out.println("Quantidade de alunos de Exame: " + contadorExame);
-		System.out.println("Quantidade de alunos Reprovado: " + cotadorReprovados);
-		System.out.println("Media da classe: " + mediaClasse);
-		System.out.println("nome do aluno com maior media " + nomeMaiorMedia + " media do aluno " + maiorMedia);
-		System.out.println("nome do aluno com menor media " + nomeMenorMedia + " media do aluno " + menorMedia);
+		System.out.println("Relatorio das inserções de nota:");
+		System.out.print("Quantidade de alunos Digitados: " + contadorAlunos);
+		System.out.print("Quantidade de alunos Aprovados:" + contadorAprovados);
+		System.out.print("Quantidade de alunos de Exame:" + contadorExame);
+		System.out.print("Quantidade de alunos Reprovado: " + cotadorReprovados);
+		System.out.print("Media da classe: " + mediaClasse);
+		System.out.print("nome do aluno com maior media " + nomeMaiorMedia + "media do aluno " + maiorMedia);
+		System.out.print("nome do aluno com menor media " + nomeMenorMedia + "media do aluno " + menorMedia);
 
 	}
 
+	
 	public static double verificaNota(double nota) {
 		
 		Scanner entrada = new Scanner(System.in);
