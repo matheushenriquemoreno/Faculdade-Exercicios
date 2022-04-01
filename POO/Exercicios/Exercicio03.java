@@ -2,7 +2,7 @@ package Exercicios;
 
 import java.util.Scanner;
 
-public class Exercicio3 {
+public class Exercicio03 {
 
 	public static void main(String[] args) {
 
@@ -11,7 +11,7 @@ public class Exercicio3 {
 		System.out.println("Digite o valor da compra: ");
 		double valorCompra = entrada.nextDouble();
 
-		while (CalculaVenda(valorCompra) == 0) {
+		while (valorCompra < 0) {
 			System.out.println("valor invalido Digite novamente: ");
 			valorCompra = entrada.nextDouble();
 		}
@@ -29,9 +29,8 @@ public class Exercicio3 {
 			return preco * 0.5;
 		} else if (preco >= 30 && preco < 50) {
 			return preco * 0.4;
-		} else if (preco >= 50) {
+		} else {
 			return preco * 0.3;
 		}
-		return 0.0;
 	}
 }

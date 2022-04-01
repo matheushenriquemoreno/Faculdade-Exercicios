@@ -1,18 +1,14 @@
 package Exercicios;
 
-import java.util.Scanner;
-
-public class Exercicio6 {
+public class Exercicio06 {
 
 	public static void main(String[] args) {
 
-		Scanner entrada = new Scanner(System.in);
 
-		System.out.println("Um codigo");
-		int codigo = entrada.nextInt();
+		System.out.println("Digite o codigo do produto: ");
+		int codigo = UtilExercicios.entrada.nextInt();
 
 		VerificaEinformaProduto(codigo);
-
 	}
 
 	public static void VerificaEinformaProduto(int codigo) {

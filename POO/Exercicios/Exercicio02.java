@@ -1,14 +1,12 @@
 package Exercicios;
 
-import java.util.Scanner;
 
-public class Exercicio2 {
+public class Exercicio02 {
 
 	public static void main(String[] args) {
-		Scanner entrada = new Scanner(System.in);
 
 		System.out.println("Digite sua idade: ");
-		int idade = entrada.nextInt();
+		int idade = UtilExercicios.entrada.nextInt();
 
 		if (idade > 65) {
 			System.out.println("dispensado");
@@ -19,7 +17,5 @@ public class Exercicio2 {
 		} else {
 			System.out.println("não vota.");
 		}
-
-		entrada.close();
 	}
 }

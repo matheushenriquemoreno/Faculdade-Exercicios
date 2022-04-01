@@ -1,27 +1,23 @@
 package Exercicios;
 
-import java.util.Scanner;
-
-public class Exercicio5 {
+public class Exercicio05 {
 
 	public static void main(String[] args) {
-
-		Scanner entrada = new Scanner(System.in);
 		
 		System.out.println("Digite seu numero de identificação: ");
-		int codigo = entrada.nextInt();
+		int codigo = UtilExercicios.entrada.nextInt();
 		
-		System.out.println("Digite sua nota: ");
-		double nota1 = vefificaNotaValida(entrada.nextDouble());
+		System.out.println("Digite sua primeira nota: ");
+		double nota1 = UtilExercicios.verificaNota(UtilExercicios.entrada.nextDouble());
 		
-		System.out.println("Digite sua nota: ");
-		double nota2 = vefificaNotaValida(entrada.nextDouble());
+		System.out.println("Digite sua segunda nota: ");
+		double nota2 = UtilExercicios.verificaNota(UtilExercicios.entrada.nextDouble());
 		
-		System.out.println("Digite sua nota: ");
-		double nota3 = vefificaNotaValida(entrada.nextDouble());
+		System.out.println("Digite sua terceira nota: ");
+		double nota3 = UtilExercicios.verificaNota(UtilExercicios.entrada.nextDouble());
 		
 		System.out.println("Digite a media dos exercicios ");
-		double mediaExercicio = vefificaNotaValida(entrada.nextDouble());
+		double mediaExercicio = UtilExercicios.verificaNota(UtilExercicios.entrada.nextDouble());
 		
 		double media = (nota1 + nota2 * 2 + nota2 * 3 + mediaExercicio) / 7.0;
 		
@@ -41,7 +37,7 @@ public class Exercicio5 {
 			else {
 				System.out.print("Reprovado");
 			}
-		
+			
 	}
 	
 	public static String retornaConceito(double media) {
@@ -59,17 +55,5 @@ public class Exercicio5 {
 			return "D";	
 		}
 		return "E";
-	}
-	
-	public static double vefificaNotaValida(double nota) {
-		
-		Scanner entrada = new Scanner(System.in);
-		
-		while(nota < 0 || nota > 10) {
-			System.out.print("nota invalida Digite novamente: ");
-			nota =  entrada.nextDouble();
-		}
-		
-		return nota;
 	}
 }

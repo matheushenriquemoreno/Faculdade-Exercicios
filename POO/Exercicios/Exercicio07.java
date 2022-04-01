@@ -1,18 +1,16 @@
 package Exercicios;
 
-import java.util.Scanner;
 
-public class Exercicio7 {
+public class Exercicio07 {
 
 	public static void main(String[] args) {
-		Scanner entrada = new Scanner(System.in);
 
-		System.out.println("Digite um codigo: ");
-		int codigo = entrada.nextInt();
+		System.out.println("Digite o codigo correspondente ao seu cargo: ");
+		int codigo = UtilExercicios.entrada.nextInt();
 
 		System.out.println("Digite seu salario: ");
-		double salario = entrada.nextDouble();
-		
+		double salario = UtilExercicios.entrada.nextDouble();
+
 		switch (codigo) {
 			case 1:
 				System.out.println("Seu cargo e Escriturário, com salario de " + salario + " e tem um aumento de 50%");
