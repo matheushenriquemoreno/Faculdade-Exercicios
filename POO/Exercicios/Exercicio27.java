@@ -1,23 +1,20 @@
 package Exercicios;
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Exercicio27 {
-
+ 
 	public static void main(String[] args) {
-		
-		Scanner entrada = new Scanner(System.in);
-		
+	
 		int limiteInferior, limiteSuperior;
 		
 		System.out.println("Digite o limite superior: ");
-		limiteSuperior = entrada.nextInt();
+		limiteSuperior = UtilExercicios.entrada.nextInt();
 		
 		do {
 		 System.out.println("Digite o limite inferior: ");
-		 limiteInferior = entrada.nextInt();
+		 limiteInferior = UtilExercicios.entrada.nextInt();
 	    }while(limiteInferior > limiteSuperior);
 		
 		int[] vetorA = retornaVetor(10,limiteInferior,limiteSuperior);
@@ -34,13 +31,13 @@ public class Exercicio27 {
 		
 		System.out.println("Vetor intersecao: ");
 		int [] intersecao = retornaIntersecaoDoisVetores(vetorA, vetorB);
-		printaVetor(intersecao);
+		printaVetor(intersecao,true);
 		
 		System.out.println("Vetor diferenca: ");
 		int [] diferenca = retornaDiferencaDoisVetores(vetorA, vetorB);
-		printaVetor(diferenca);
+		printaVetor(diferenca,true);
 		
-		System.out.println("Vetor intercalacao ordenado: ");
+		System.out.println("Vetor intercalacao: ");
 		int [] intercalacao = retornaIntercalacaoDoisVetores(vetorA, vetorB);
 		printaVetor(intercalacao);
 		
@@ -74,23 +71,20 @@ public class Exercicio27 {
 		return vetorIntersecao;
 	}
 	
-	
 	public static int[] retornaDiferencaDoisVetores(int[] vetor1,int [] vetor2) {
 		
 		int tamanho = vetor1.length == vetor2.length ? vetor1.length: 0; 
 		int[] vetorDiferenca = new int[tamanho];
 		
 		for(int i = 0; i < vetorDiferenca.length; i++) {			
+			boolean ehDiferenca = true;
 			for (int j = 0; j < vetorDiferenca.length; j++) {
-				
 				if(vetor1[i] == vetor2[j]) {
-					vetorDiferenca[i] = 0;
-					break;
+					ehDiferenca = false;
 				}
-
-				if(vetor1[i] != vetor2[j]) {
-					vetorDiferenca[i] = vetor1[i];
-				}
+			}
+			if(ehDiferenca) {
+				vetorDiferenca[i] = vetor1[i];
 			}
 		}
 		
@@ -127,7 +121,14 @@ public class Exercicio27 {
 	
 	public static void printaVetor(int[] vetor) {
 		for(int numero : vetor) {
-			if(numero != 0)
+			 System.out.print("| " + numero + " ");
+		}
+		System.out.println();
+	}
+	
+	public static void printaVetor(int[] vetor,boolean mostraZero) {
+		for(int numero : vetor) {
+			if(numero != 0 && mostraZero)
 			 System.out.print("| " + numero + " ");
 		}
 		System.out.println();
@@ -137,5 +138,4 @@ public class Exercicio27 {
 		Random random = new Random();
 		return random.nextInt(limiteSuperior - limiteInferior + 1) + limiteInferior;
 	}
-
 }

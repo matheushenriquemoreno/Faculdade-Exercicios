@@ -1,26 +1,23 @@
 package Exercicios;
 
-import java.util.Scanner;
-
 public class Exercicio14 {
 
 	public static void main(String[] args) {
-		Scanner entrada = new Scanner(System.in);
 		 
-		String desejaSair,nomeMaiorMedia ="", nomeMenorMedia ="";
+		String desejaSair, nomeMaiorMedia ="", nomeMenorMedia ="";
 		int contadorAlunos = 0, contadorAprovados = 0, cotadorReprovados = 0, contadorExame = 0;
 		double mediaClasse = 0, maiorMedia = 0, menorMedia = 0;
 
 		do {
 			contadorAlunos++;
 			System.out.println("digite o nome do aluno: ");		
-			String nome = entrada.next();
+			String nome = UtilExercicios.entrada.next();
 			
 			System.out.println("Digite sua nota: ");
-			double nota1 = verificaNota(entrada.nextDouble());
+			double nota1 = UtilExercicios.verificaNota(UtilExercicios.entrada.nextDouble());
 					
 			System.out.println("Digite sua nota: ");
-			double nota2 = verificaNota(entrada.nextDouble());
+			double nota2 = UtilExercicios.verificaNota(UtilExercicios.entrada.nextDouble());
 			
 			double mediaAritimedica = (nota1 + nota2) / 2;
 			
@@ -58,10 +55,9 @@ public class Exercicio14 {
 			}
 			
 			System.out.println("Deseja Sai?(sim, não)");
-			desejaSair = entrada.next();
+			desejaSair = UtilExercicios.entrada.next();
 			
 		} while(!desejaSair.equals("sim"));
-		
 		
 		System.out.println("Relatorio das inserções de nota: ");
 		System.out.println("Quantidade de alunos Digitados: " + contadorAlunos);
@@ -73,16 +69,4 @@ public class Exercicio14 {
 		System.out.println("nome do aluno com menor media " + nomeMenorMedia + " media do aluno " + menorMedia);
 
 	}
-
-	public static double verificaNota(double nota) {
-		
-		Scanner entrada = new Scanner(System.in);
-		
-		while (nota > 10.00 || nota < 0 ) {
-			System.out.println("nota Invalida digite novamente: ");
-			nota = entrada.nextDouble();
-			}
-		return nota;
-	}
-	
 }

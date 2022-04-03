@@ -8,7 +8,7 @@ public class UtilExercicios {
 	
 	public static <T> void printaVetor (T vetor []) {
 		for(T item : vetor) {
-			System.out.print(item + " |");
+			System.out.print(item + " | ");
 		}
 		System.out.println();
 	}

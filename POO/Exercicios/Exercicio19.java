@@ -1,15 +1,11 @@
 package Exercicios;
 
-import java.util.Scanner;
-
 public class Exercicio19 {
 	
 	public static void main(String[] args) {
 		
-		Scanner entrada = new Scanner(System.in);
-		
 		System.out.print("digite a quantidade de linha para a piramide de asteriscos: ");
-		int quantidadeLinha = entrada.nextInt();
+		int quantidadeLinha = UtilExercicios.entrada.nextInt();
 		
 		for (int x = 1; x < quantidadeLinha; x++) {
 			for (int y = 0 ; y < x ; y++){

@@ -1,21 +1,17 @@
 package Exercicios;
 
-import java.util.Scanner;
-
 public class Exercicio10 {
 
 	public static void main(String[] args) {
-		
-		Scanner entrada = new Scanner(System.in);
 		
 		int numero;
 		
 		do {
 		System.out.println("Digite um numero para fatoração: ");
-		 numero= entrada.nextInt();
+		 numero = UtilExercicios.entrada.nextInt();
 		} while(numero < 0);
 		
-		System.out.println("O fatorial de " + numero +" = " + calculaFatorial(numero));
+		System.out.println("O fatorial de " + numero + " = " + calculaFatorial(numero));
 		 
 	}	
 	
@@ -23,7 +19,7 @@ public class Exercicio10 {
 		
 		int resultado = 1;
 		
-		for(int i = 1; i <= numero ;i++) {
+		for(int i = 1; i <= numero ; i++) {
 			resultado *= i;
 		}
 		
