@@ -1,7 +1,6 @@
 package Exercicios;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class Exercicio27 {
  
@@ -76,14 +75,17 @@ public class Exercicio27 {
 		int tamanho = vetor1.length == vetor2.length ? vetor1.length: 0; 
 		int[] vetorDiferenca = new int[tamanho];
 		
-		for(int i = 0; i < vetorDiferenca.length; i++) {			
-			boolean ehDiferenca = true;
+		for(int i = 0; i < vetorDiferenca.length; i++) {
+			
+			boolean veririfaNumeroExiste = false;
+			
 			for (int j = 0; j < vetorDiferenca.length; j++) {
 				if(vetor1[i] == vetor2[j]) {
-					ehDiferenca = false;
+					veririfaNumeroExiste = true;
 				}
 			}
-			if(ehDiferenca) {
+			
+			if(!veririfaNumeroExiste) {
 				vetorDiferenca[i] = vetor1[i];
 			}
 		}
